@@ -47,5 +47,6 @@ use alloc::vec::Vec;
 #[derive(PartialEq)]
 #[cfg_attr(feature = "facet", derive(facet::Facet))]
 pub struct RoaringBitmap {
+    #[cfg_attr(feature = "facet", facet(opaque))]
     containers: Vec<container::Container>,
 }

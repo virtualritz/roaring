@@ -39,5 +39,6 @@ pub use self::iter::{BitmapIter, IntoIter, Iter};
 #[derive(PartialEq)]
 #[cfg_attr(feature = "facet", derive(facet::Facet))]
 pub struct RoaringTreemap {
+    #[cfg_attr(feature = "facet", facet(opaque))]
     map: BTreeMap<u32, RoaringBitmap>,
 }
