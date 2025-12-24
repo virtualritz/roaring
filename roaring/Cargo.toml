@@ -19,10 +19,12 @@ license = "MIT OR Apache-2.0"
 [dependencies]
 bytemuck = { workspace = true, optional = true }
 byteorder = { workspace = true, optional = true }
+facet = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 
 [features]
 default = ["std"]
+facet = ["dep:facet", "std"]
 serde = ["dep:serde", "std"]
 simd = []
 std = ["dep:bytemuck", "dep:byteorder"]
