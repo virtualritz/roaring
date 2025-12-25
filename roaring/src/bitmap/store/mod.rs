@@ -25,6 +25,8 @@ use crate::bitmap::container::ARRAY_LIMIT;
 use alloc::boxed::Box;
 
 #[derive(Clone)]
+#[cfg_attr(feature = "facet", derive(facet::Facet))]
+#[cfg_attr(feature = "facet", repr(u8))]
 pub(crate) enum Store {
     Array(ArrayStore),
     Bitmap(BitmapStore),

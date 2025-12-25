@@ -21,6 +21,7 @@ use super::Interval;
 pub(crate) const ARRAY_ELEMENT_BYTES: usize = 2;
 
 #[derive(Clone, Eq, PartialEq)]
+#[cfg_attr(feature = "facet", derive(facet::Facet))]
 pub(crate) struct ArrayStore {
     vec: Vec<u16>,
 }
